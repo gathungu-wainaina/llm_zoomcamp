@@ -1,0 +1,6 @@
+To pull the Qdrant image 
+    we run: docker pull qdrant/qdrant
+To run the containter:
+    we run: docker run -p 6333:6333 -p 6334:6334 \
+            -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+            qdrant/qdrant
