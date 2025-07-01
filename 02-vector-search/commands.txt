@@ -1,6 +1,11 @@
 To pull the Qdrant image 
-    we run: docker pull qdrant/qdrant
+    we run: 
+    
 To run the containter:
     we run: docker run -p 6333:6333 -p 6334:6334 \
             -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
             qdrant/qdrant
+
+The command mounts the local storage to eep the data persistent
+    -6333 - REST API port
+    -6334-gRPC API Port
